@@ -1,6 +1,8 @@
 <script setup>
 import Navbar from "@/components/Navbar.vue";
-import DataTable from "@/components/DataTable.vue";
+import DataTableComponent from "@/components/DataTableComponent.vue";
+import ChipsComponent from "@/components/ChipsComponent.vue";
+
 </script>
 
 <template>
@@ -8,8 +10,11 @@ import DataTable from "@/components/DataTable.vue";
     <section class="bg-gray-50 dark:bg-gray-900">
         <Navbar />
     </section>
+    <section>
+        <ChipsComponent />
+    </section>
     <section >
-        <DataTable />
+        <DataTableComponent />
     </section>
 
 
