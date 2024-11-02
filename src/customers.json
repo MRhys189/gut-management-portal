@@ -1,0 +1,52 @@
+{
+    "debtors": [
+    {
+        "id": 1,
+        "name": "Rhys Murage",
+        "amount": 45000,
+        "staffId": "092452",
+        "floor": 2,
+        "department":"Digital"
+    },
+    {
+        "id": 2,
+        "name": "James Xavier",
+        "amount": -7780,
+        "staffId": "12334",
+        "floor": 2,
+        "department":"Claims"
+    },
+    {
+        "id":3,
+        "name": "Magneto Magneto",
+        "amount": 2000,
+        "staffId": "09242",
+        "floor": 5,
+        "department":"Digital"
+    },
+    {
+        "id": 4,
+        "name": "George Mwangi",
+        "amount": 3400,
+        "staffId": "12367",
+        "floor": 3,
+        "department":"CX"
+    },
+    {
+        "id": 5,
+        "name": "Chris Mully",
+        "amount": 9000,
+        "staffId": "092452",
+        "floor": 2,
+        "department":"Claims & Legal"
+    },
+    {
+        "id": 6,
+        "name": "Diana Ross",
+        "amount": 4000,
+        "staffId": "092452",
+        "floor": 2,
+        "department":"Digital"
+    }
+]
+}
