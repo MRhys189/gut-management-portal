@@ -1,6 +1,6 @@
-# gut-management-portal
+# customers-management-portal
 
-This template should help get you started developing with Vue 3 in Vite.
+An open source module to manage debtors and creditors of a business.
 
 ## Recommended IDE Setup
 
