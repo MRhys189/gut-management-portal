@@ -18,7 +18,9 @@ const handleClick = () => {
 <template>
     <div class="py-5 flex flex-wrap gap-12 justify-center items-center">
         <div
-        class="px-3 border-black border-2 rounded-md bg-slate-800 text-white hover:bg-slate-500"
+        class="px-3
+         border-black border-2 rounded-md
+         bg-slate-800 text-white hover:bg-slate-500"
         v-for="(category, index) in categories"
         :key="index"
         @click="handleClick"

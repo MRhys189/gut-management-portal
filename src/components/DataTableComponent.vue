@@ -11,6 +11,11 @@ const props = defineProps({
 const state = reactive({
     customers: []
 });
+const tableData = {};
+
+async function commaSeparatedNumber(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
 
 onMounted(async () => {
@@ -26,26 +31,35 @@ onMounted(async () => {
 </script>
 
 <template>
-    <section class="py-16 content-center">
-        
-    </section>
-    <!-- <section class="bg-green-100 px-14 py-14">
-        <div class="container-xl lg:container m-auto">
-            <h2 class="text-3xl font-bold text-black-500 mb-6 text-center">Customers</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div v-for="customer in state.customers" :key="customer.id">
-                    <div class="div">{{ customer.name }}</div>
-                    <div class="div">{{ customer.staff }}</div>
-                    <div class="div">{{ customer.amount }}</div>
-                 </div>
-            </div>
+    <section>
+        <div class="mx-5 relative shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">StaffId</th>
+                        <th scope="col" class="px-6 py-3">Name</th>
+                        <th scope="col" class="px-6 py-3">Amount</th>
+                    </tr>
+                </thead>
+                <tbody v-for="(customer, index) in state.customers" :key="index">
+                    <tr class="bg-white border-b dark:bg-gray-800 hover:text-gray-50 dark:hover:bg-gray-600">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            {{ customer.staffId }}
+                        </th>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            {{ customer.name }}
+                        </th>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            {{ customer.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}
+                        </th>
+                    </tr>
+                </tbody>
+            
+            </table>
         </div>
         
-    </section> -->
-    <!-- <div class="grid grid-cols-3 md:grid-cols-1 gap-2"> -->
-        <!-- <DataRecordComponent v-for="(customer, index) in state.customers" :key="customer.id" :customer="customer"/> -->
-        
-    <!-- </div> -->
+    </section>
+
 </template>
 
 <!-- <template>
